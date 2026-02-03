@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhishek Sanjay Gujar | Creative Head & Strategist</title>
+    <meta name="description" content="Architecting visual legacies through cinematic precision. A Mumbai-based Creative Head & Strategist specializing in brand orchestration." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@400;600;800&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      html {
+        cursor: none; /* Hide default cursor */
+      }
+      html.lenis {
+        height: auto;
+      }
+      .lenis.lenis-smooth {
+        scroll-behavior: auto !important;
+      }
+      .lenis.lenis-smooth [data-lenis-prevent] {
+        overscroll-behavior: contain;
+      }
+      .lenis.lenis-stopped {
+        overflow: hidden;
+      }
+      :root {
+        --bg-color: #050505;
+        --grid-color: rgba(255, 255, 255, 0.05);
+      }
+      body {
+        background-color: var(--bg-color);
+        color: #e4e4e7; /* zinc-200 */
+        font-family: 'Manrope', sans-serif;
+        overflow-x: hidden; /* Prevent horizontal scroll from animations */
+      }
+      a, button, input, .cursor-hover {
+        cursor: none; /* Ensure elements don't show default cursor */
+      }
+      h1, h2, h3, h4 {
+        font-family: 'Manrope', sans-serif;
+        letter-spacing: -0.02em;
+      }
+      .display-text {
+        font-family: 'Oswald', sans-serif;
+      }
+      .mono-text {
+        font-family: 'Inter', monospace;
+      }
+      
+      /* Architectural Grid Background */
+      .bg-grid-pattern {
+        background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+          linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+
+      /* Noise Overlay Animation */
+      @keyframes noise {
+        0% { transform: translate(0,0) }
+        10% { transform: translate(-5%,-5%) }
+        20% { transform: translate(-10%,5%) }
+        30% { transform: translate(5%,-10%) }
+        40% { transform: translate(-5%,15%) }
+        50% { transform: translate(-10%,5%) }
+        60% { transform: translate(15%,0) }
+        70% { transform: translate(0,10%) }
+        80% { transform: translate(-15%,0) }
+        90% { transform: translate(10%,5%) }
+        100% { transform: translate(5%,0) }
+      }
+      
+      .noise-overlay {
+        position: fixed;
+        top: -50%;
+        left: -50%;
+        right: -50%;
+        bottom: -50%;
+        width: 200%;
+        height: 200vh;
+        background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+        background-repeat: repeat;
+        animation: noise .2s infinite;
+        opacity: .05;
+        visibility: visible;
+        pointer-events: none;
+        z-index: 9998;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "gsap": "https://esm.sh/gsap@3.12.5",
+    "gsap/ScrollTrigger": "https://esm.sh/gsap@3.12.5/ScrollTrigger",
+    "gsap/": "https://esm.sh/gsap@^3.14.2/",
+    "@studio-freight/lenis": "https://esm.sh/@studio-freight/lenis@1.0.42"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
